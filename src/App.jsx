@@ -9,18 +9,25 @@ import RapidHydration from "./Components/RapidHydration.jsx";
 import Footer from "./Components/Footer.jsx";
 function App() {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "90vh",
-        color: "white", // make text visible on image
-        position: "relative",
-      }}
-    >
-      <Navbar />
-      <Hero />
+    <div className="main-wrapper">
+      <div
+        className="hero-section"
+        style={{
+          padding: "0",
+          margin: "0",
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          maxHeight: "85vh", // Use minHeight so it grows with content if needed
+          width: "100%",
+          color: "white",
+          position: "relative",
+        }}
+      >
+        <Navbar />
+        <Hero />
+      </div>
+      {/* Move other sections outside the background div if they shouldn't share that BG */}
       <Hydration />
       <PrimeIce />
       <Energy />

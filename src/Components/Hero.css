@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+body {
+  width: 100vw;
+}
 .hero {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: left;
+
   justify-content: center;
   height: 95vh;
   width: auto;
@@ -15,6 +17,18 @@
   color: white;
   font-family: Anton, sans-serif;
   padding: 150px 50px 0px 50px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Corrected from 'left' */
+
+  height: 95vh;
+  width: 100vw; /* Change from auto to 100% */
+  box-sizing: border-box;
+
+  /* Add a background image here to match your screenshot */
 }
 
 .explore-button {
@@ -50,18 +64,4 @@
   letter-spacing: 1px;
 }
 
-.missing {
-  height: 50px;
-  width: 200px;
-  position: fixed; /* fixed to viewport */
-  top: 50%; /* push down to middle */
-  right: -13.4%; /* push right to middle */
-  transform: translate(-50%, -50%) rotate(90deg);
-  background-color: rgb(255, 255, 255);
-  color: black;
-  border-radius: 0px 0pc 6px 6px;
-  text-align: center;
-  align-content: center;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-}
+

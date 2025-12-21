@@ -1,3 +1,5 @@
+/* Footer.css */
+
 .footer {
   width: 100%;
   background-color: black;
@@ -8,7 +10,8 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 20px;
-  text-align: left;
+  text-align: left; /* Desktop remains left-aligned */
+  color: white;
 }
 
 .top-section {
@@ -16,6 +19,7 @@
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .section {
@@ -25,7 +29,6 @@
 
 .about-section {
   max-width: 280px;
-  
 }
 
 .footer h2 {
@@ -45,6 +48,7 @@
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
 .section ul {
@@ -54,6 +58,7 @@
   font-weight: lighter;
   font-size: 1.24rem;
   letter-spacing: 0.05rem;
+  padding: 0;
 }
 
 .section ul li:hover {
@@ -79,5 +84,65 @@ ion-icon {
 }
 
 .footer input {
-  padding: 1% 2%;
+  padding: 10px;
+}
+
+.section_newsletter h2,
+.section_newsletter p,
+.section_newsletter input {
+  padding: 15px 0px;
+}
+
+/* --- Centering Logic ONLY in Media Query --- */
+
+@media (max-width: 1020px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centers all text (h2, p) */
+    padding: 40px 10px;
+  }
+
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the list and button containers */
+    padding: 20px 0;
+  }
+
+  .section ul {
+    display: flex; /* Switch from grid to flex for easy centering */
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-section ul {
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px 0; /* Centers social icons */
+  }
+
+  .footlink ul {
+    gap: 16px;
+    /* Optional: border removed for cleaner look, but you can add it back if needed */
+  }
+
+  .footer input {
+    width: 60%; /* Makes input look better on mobile */
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .section_newsletter {
+    padding: 0 20px;
+  }
 }

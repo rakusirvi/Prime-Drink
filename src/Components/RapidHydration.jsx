@@ -2,7 +2,6 @@ import React from "react";
 import ProductCard from "./ProductCardForRapidHydration";
 import "./Hydration.css";
 
-
 import image from "../assets/RapidHydration/1st.png";
 import image2 from "../assets/RapidHydration/2nd.png";
 import image3 from "../assets/RapidHydration/3rd.png";
@@ -13,7 +12,10 @@ function RapidHydration() {
   return (
     <div className="Container">
       <div className="Hydration">
-        <div className="title">RAPID REHYDRATION</div>
+        <div className="title">
+          RAPID <br />
+          REHYDRATION
+        </div>
         <div className="product_cart">
           <ProductCard
             image={image}
@@ -40,7 +42,7 @@ function RapidHydration() {
           <img className="img1" src={image6} />
         </div>
         <div className="Shop-hydration-inner">
-          <img className="shop-hydration-img shop-ing-img" src={image7} />
+          <img className="shop-hydration-img shop-ing-img shop-ing-img2" src={image7} />
           <a href="#" className="shop-hydration-btn">
             REHYDRATE NOW
           </a>

@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
 .img1:hover {
   transform: scale(1.05);
 }
@@ -17,6 +15,7 @@
   align-items: center;
   margin-bottom: 10px;
   padding-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 .Shop-hydration-inner {
@@ -30,7 +29,24 @@
   height: 30vh;
 }
 
-
-.Shop-hydration  div .img1{
+.Shop-hydration div .img1 {
   height: 50vh;
+  transition: all 0.2s ease;
+}
+
+@media (width <= 700px) {
+  .Shop-hydration div .img1 {
+    width: 90vw;
+    height: auto;
+  }
+
+  .shop-ing-img {
+    width: 40vw;
+    height: auto;
+  }
+
+  .shop-ing-img2 {
+    width: 60vw;
+    height: auto;
+  }
 }

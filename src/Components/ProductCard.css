@@ -12,6 +12,9 @@
   font-family: Inter, sans-serif;
 }
 
+
+/* Add this to your main CSS file or Hydration.css */
+
 .product-image-container {
   margin-bottom: 5px;
 }
@@ -19,7 +22,7 @@
 .product-image {
   height: 170px; /* Keeps all bottles the same height */
   object-fit: contain;
-  transform: scaleY(.9);
+  transform: scaleY(0.9);
 }
 
 .product-title {

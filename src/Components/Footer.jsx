@@ -53,7 +53,7 @@ function Footer() {
             <li>Contact US</li>
           </ul>
         </div>
-        <div className="section">
+        <div className="section section_newsletter">
           <h2>NewsLetter</h2>
           <p>
             Subscribe to receive updates, access to exclusive deals, and more.
