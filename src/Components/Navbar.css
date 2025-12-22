@@ -3,7 +3,6 @@
 body {
   font-family: Bebas Neue, sans-serif;
   overflow-x: hidden;
-
 }
 
 .header-1 {
@@ -102,32 +101,78 @@ body {
   width: 100%;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 70%; /* Positions it directly below the text */
-  left: 0;
-  background-color: white;
-
-  /* Important: this makes the box fit the text inside, 
-     regardless of how long the text is */
-  width: max-content;
-  min-width: 180px;
-
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-  margin-top: 10px; /* Adds a small gap */
-  z-index: 900;
+/* 1. This allows the dropdown to be wider than the "SHOP" text */
+.header-2 {
+  position: relative;
+  width: 100%;
 }
 
-/* The Links inside the Dropdown */
-.dropdown-menu a {
-  padding: 12px 25px;
+/* 2. Mega Menu Container */
+.dropdown-menu {
+  position: static;
+  left: 0;
+  width: 100vw; /* Full screen width */
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 40px 8%; /* Adjust side padding to match your site's alignment */
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+  z-index: 1000000;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* 3. Text Columns */
+.dropdown {
+  flex: 0 0 200px; /* Fixed width for text columns */
+  margin-right: 40px;
+}
+
+.dropdown h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  margin: 8px;
+}
+
+.dropdown ul li {
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* 4. Image Section (The Right Side) */
+.image-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Pushes images to the far right */
+  gap: 20px;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 300px; /* Fixed square size */
+  height: 300px;
+}
+
+.navbar-img {
+  width: 250px;
+  height: auto;
+}
+
+.dropdown-menu li {
+  padding: 10px 25px;
   text-decoration: none;
   color: black;
-  font-size: 15px;
+  font-size: 16px;
   display: block;
+  list-style: none;
 }
 
 .dropdown-menu a:hover nav {
@@ -146,4 +191,31 @@ body {
 
 .nav:hover .USUK div {
   border: 1px solid black;
+}
+
+.dropdown-container {
+  padding: 3px 0;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+}
+
+.HoveredClass {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+@media (width < 750px) {
+  .image-section {
+    display: none;
+  }
+
+  .dropdown-menu li {
+    padding: 8px 20px;
+    text-align: left;
+    font-size: 15px;
+    display: block;
+    list-style: none;
+  }
 }

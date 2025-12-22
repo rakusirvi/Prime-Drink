@@ -1,26 +1,38 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
+import Image from "../assets/navbar/1st.png";
+
 function Navbar() {
   const [showShop, setShowShop] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleShop = () => {
+    setShowShop((prev) => {
+      const newState = !prev;
+      if (newState) setShowAbout(false); // Close ABOUT if SHOP opens
+      return newState;
+    });
+  };
+
+  const toggleAbout = () => {
+    setShowAbout((prev) => {
+      const newState = !prev;
+      if (newState) setShowShop(false); // Close SHOP if ABOUT opens
+      return newState;
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const triggerPoint = window.innerHeight * 0.6;
-
-      if (window.scrollY > triggerPoint) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > triggerPoint);
+      setShowAbout(false);
+      setShowShop(false);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -47,33 +59,21 @@ function Navbar() {
         <div className="header-2">
           <div className="header-2">
             <div
-              className="dropdown-container"
-              onMouseEnter={() => setShowShop(true)}
-              onMouseLeave={() => setShowShop(false)}
+              className={`dropdown-container Shop-nav-btn ${
+                showShop ? "HoveredClass" : ""
+              }`}
+              onClick={toggleShop}
             >
               <div className="nav-item">SHOP</div>
-              {showShop && (
-                <div className="dropdown-menu">
-                  <a href="#">Hydration</a>
-                  <a href="#">Energy</a>
-                  <a href="#">Bundles</a>
-                </div>
-              )}
             </div>
 
             <div
-              className="dropdown-container"
-              onMouseEnter={() => setShowAbout(true)}
-              onMouseLeave={() => setShowAbout(false)}
+              className={`dropdown-container About-nav-btn ${
+                showAbout ? "HoveredClass" : ""
+              }`}
+              onClick={toggleAbout}
             >
               <div className="nav-item">ABOUT PRIME</div>
-              {showAbout && (
-                <div className="dropdown-menu">
-                  <a href="#">Teams + Athletes</a>
-                  <a href="#">Creators</a>
-                  <a href="#">Artists</a>
-                </div>
-              )}
             </div>
 
             <div className="dropdown-container">
@@ -85,6 +85,50 @@ function Navbar() {
             </div>
           </div>
         </div>
+        {showShop && (
+          <div className="dropdown-menu">
+            <div className="dropdown">
+              <h2>SHOP PRIME</h2>
+              <ul>
+                <li>HYDRATION</li>
+                <li>ENERGY</li>
+                <li>ICE HYDRATION</li>
+                <li>RAPID REHYDRATION</li>
+                <li>HYDRATION+ STICKS</li>
+              </ul>
+            </div>
+            <div className="dropdown">
+              <h2>FEATURED FLAVORS</h2>
+              <ul>
+                <li>SNOWBALL SLUSHY</li>
+                <li>KIWI BERRY</li>
+                <li>PESO PLUMA</li>
+                <li>KSI THE NIGHTMARE</li>
+                <li>ORANGE KREAM</li>
+                <li>OCEAN CHERRY</li>
+              </ul>
+            </div>
+            <div className="image-section">
+              <div className="img-wrapper">
+                <img className="navbar-img" src={Image} alt="Snowball Slushy" />
+              </div>
+              <div className="img-wrapper">
+                <img className="navbar-img" src={Image} alt="Kiwi Berry" />
+              </div>
+            </div>
+          </div>
+        )}
+        {showAbout && (
+          <div className="dropdown-menu">
+            <div>
+              <ul>
+                <li>Teams + Athletes</li>
+                <li>Creators</li>
+                <li>Artists</li>
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
