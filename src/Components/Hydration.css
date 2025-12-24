@@ -6,19 +6,27 @@
   color: black;
   text-align: center;
   padding-top: 7%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .title {
-  font-family: Inter, sans-serif;
-  font-size: 7vw; /* Use viewport width so it scales with the screen */
-  letter-spacing: 1rem;
-  font-weight: 300;
-  display: block; /* Ensures it takes its own line */
-  line-height: 1;
-  overflow: hidden; /* Prevents long text from pushing the page width */
-  text-transform: uppercase;
-  transform: scaleX(1.3) scaleY(0.78);
+  width: 100%;
+  overflow-x: clip;
+  text-align: center;
 }
+
+.title {
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: clamp(2.5rem, 7vw, 9rem);
+  letter-spacing: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transform: scaleX(1.7);
+  padding-bottom: 10px;
+}
+
 .product_cart {
   display: flex;
   justify-content: space-evenly;
@@ -74,14 +82,17 @@
 }
 
 .title {
-  line-height: 6.2rem;
+  line-height: 6rem;
 }
 
 @media (width <= 700px) {
   .title {
-    letter-spacing: 0.5rem;
-    font-size: 8vw;
+    letter-spacing: 0.4rem;
+    font-size: 7.7vw;
     font-weight: 400;
+    transform: scaleX(1.4);
+    line-height: 2rem;
+    padding-bottom: 20px;
   }
 
   .Shop-Hydration div img {

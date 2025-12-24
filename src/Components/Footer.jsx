@@ -6,7 +6,7 @@ function Footer() {
       <div className="top-section">
         <div className="section about-section">
           <h2>ABOUT PRIME</h2>
-          <p >
+          <p>
             PRIME was developed to fill the void where great taste meets
             function. With bold, thirst-quenching flavors to help you refresh,
             replenish, and refuel, PRIME is the perfect boost for any endeavor.

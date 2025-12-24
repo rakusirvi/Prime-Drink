@@ -1,52 +1,86 @@
-.Container {
-  padding: 0;
+/* GLOBAL RESET (VERY IMPORTANT) */
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* MAIN CONTAINER */
+.Container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* SHOP SECTION */
+.Shop-hydration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* use gap instead of space-evenly */
+  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* INNER CARD */
+.Shop-hydration-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* IMAGES */
+.img1 {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
 }
 
 .img1:hover {
   transform: scale(1.05);
 }
 
-.Shop-hydration {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 10px;
-  padding-bottom: 60px;
-  flex-wrap: wrap;
+/* INGREDIENT IMAGES */
+.shop-ing-img,
+.shop-ing-img2 {
+  max-width: 100%;
+  height: auto;
 }
 
-.Shop-hydration-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.Shop-hydration div {
+  text-align: center;
 }
 
-.shop-ing-img {
-  height: 30vh;
-}
-
-.Shop-hydration div .img1 {
-  height: 50vh;
-  transition: all 0.2s ease;
-}
-
-@media (width <= 700px) {
-  .Shop-hydration div .img1 {
-    width: 90vw;
-    height: auto;
+/* DESKTOP IMAGE SIZE */
+@media (min-width: 701px) {
+  .img1 {
+    height: 50vh;
   }
 
   .shop-ing-img {
-    width: 40vw;
-    height: auto;
+    height: 30vh;
+  }
+}
+
+/* MOBILE FIX */
+@media (max-width: 700px) {
+  .img1 {
+    width: 90%;
+  }
+
+  .shop-ing-img {
+    width: 50%;
   }
 
   .shop-ing-img2 {
-    width: 60vw;
-    height: auto;
+    width: 60%;
   }
 }

@@ -10,6 +10,7 @@ import Footer from "./Components/Footer.jsx";
 function App() {
   return (
     <div className="main-wrapper">
+      {/* 2. Pass the setter function to Navbar so the login icon can change the page */}
       <div
         className="hero-section"
         style={{
@@ -18,7 +19,7 @@ function App() {
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          maxHeight: "85vh", // Use minHeight so it grows with content if needed
+          maxHeight: "85vh",
           width: "100%",
           color: "white",
           position: "relative",
@@ -27,7 +28,6 @@ function App() {
         <Navbar />
         <Hero />
       </div>
-      {/* Move other sections outside the background div if they shouldn't share that BG */}
       <Hydration />
       <PrimeIce />
       <Energy />

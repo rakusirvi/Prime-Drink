@@ -64,4 +64,22 @@ body {
   letter-spacing: 1px;
 }
 
+@media (width <= 625px) {
+  .hero {
+    align-items: center;
+    text-align: center;
+  }
+  .explore-button {
+    padding: 12px 35px;
 
+    font-size: 1.2rem;
+  }
+
+  .h2 {
+    font-size: 2.1rem;
+  }
+
+  .p {
+    font-weight: 400;
+  }
+}

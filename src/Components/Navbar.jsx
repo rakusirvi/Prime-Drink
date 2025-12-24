@@ -44,7 +44,7 @@ function Navbar() {
             <div>US</div>
           </div>
           <div className="Prime">PRIME</div>
-          <div className=" flexi icons">
+          <div className=" flexic icons">
             <div>
               <ion-icon name="people-outline"></ion-icon>
             </div>
