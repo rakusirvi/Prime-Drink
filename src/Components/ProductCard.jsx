@@ -1,6 +1,15 @@
 import "./ProductCard.css";
+import { Link } from "react-router-dom";
 
 function ProductCard({ image, title, packSize, link, btn }) {
+  const isExternal =
+    typeof link === "string" &&
+    (link.startsWith("http") ||
+      link.startsWith("//") ||
+      link.startsWith("mailto:") ||
+      link.startsWith("tel:"));
+  const label = btn || "LEARN MORE";
+
   return (
     <div className="product-card">
       <div className="product-image-container">
@@ -12,9 +21,20 @@ function ProductCard({ image, title, packSize, link, btn }) {
         <p className="product-pack">{packSize}</p>
       </div>
 
-      <a href={link} className="learn-more-btn">
-        {btn ? btn : "LEARN MORE"}
-      </a>
+      {isExternal ? (
+        <a
+          href={link}
+          className="learn-more-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {label}
+        </a>
+      ) : (
+        <Link to={link || "#"} className="learn-more-btn">
+          {label}
+        </Link>
+      )}
     </div>
   );
 }

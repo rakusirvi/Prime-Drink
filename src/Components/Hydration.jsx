@@ -20,31 +20,31 @@ const productList = [
     image: image,
     title: "KSI the Nightmare",
     packSize: "12PK",
-    link: "/KSI",
+    link: "/ksi",
   },
   {
     image: image3,
     title: "PRIMESERIES COLLECTOR",
     packSize: "12PK",
-    link: "/PRIMESERIES",
+    link: "/primeseries",
   },
   {
     image: image4,
     title: "Sournova Blast",
     packSize: "12PK",
-    link: "/Sournova",
+    link: "/sournova",
   },
   {
     image: image5,
     title: "Future Freeze",
     packSize: "12PK",
-    link: "/Future",
+    link: "/future",
   },
   {
     image: image6,
     title: "Ice Pop Flavor",
     packSize: "12PK",
-    link: "/IcePop",
+    link: "/icepop",
   },
 ];
 
@@ -75,7 +75,7 @@ function Hydration() {
             />
           </div>
           <div>
-            <a  className="shop-hydration-btn">
+            <a className="shop-hydration-btn">
               SHOP <br /> HYDRATION
             </a>
           </div>

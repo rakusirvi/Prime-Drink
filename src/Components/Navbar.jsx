@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import Image from "../assets/navbar/1st.png";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   const [showShop, setShowShop] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
@@ -40,19 +40,29 @@ function Navbar() {
       <div className={`nav ${isScrolled ? "scrolled" : ""}`}>
         <div className="header-1">
           <div className="flexi USUK">
-            <div>UK</div>
-            <div>US</div>
+            <div>
+              <Link>UK</Link>
+            </div>
+            <div>
+              <Link>US</Link>
+            </div>
           </div>
           <div className="Prime">PRIME</div>
           <div className=" flexic icons">
             <div>
-              <ion-icon name="people-outline"></ion-icon>
+              <Link to="/Prime-Drink/login">
+                <ion-icon name="people-outline"></ion-icon>
+              </Link>
             </div>
             <div>
-              <ion-icon name="search-outline"></ion-icon>
+              <Link to="/login">
+                <ion-icon name="search-outline"></ion-icon>
+              </Link>
             </div>
             <div>
-              <ion-icon name="cart-outline"></ion-icon>
+              <Link to="/login">
+                <ion-icon name="cart-outline"></ion-icon>
+              </Link>
             </div>
           </div>
         </div>
@@ -64,7 +74,9 @@ function Navbar() {
               }`}
               onClick={toggleShop}
             >
-              <div className="nav-item">SHOP</div>
+              <div className="nav-item">
+                <Link>SHOP</Link>
+              </div>
             </div>
 
             <div
@@ -73,15 +85,21 @@ function Navbar() {
               }`}
               onClick={toggleAbout}
             >
-              <div className="nav-item">ABOUT PRIME</div>
+              <div className="nav-item">
+                <Link>ABOUT PRIME</Link>
+              </div>
             </div>
 
             <div className="dropdown-container">
-              <div className="nav-item">WHERE TO BUY</div>
+              <div className="nav-item">
+                <Link>WHERE TO BUY</Link>
+              </div>
             </div>
 
             <div className="dropdown-container">
-              <div className="nav-item">VERIFY YOUR PRIME</div>
+              <div className="nav-item">
+                <Link>VERIFY YOUR PRIME</Link>
+              </div>
             </div>
           </div>
         </div>

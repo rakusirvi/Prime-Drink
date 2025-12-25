@@ -12,7 +12,6 @@
   font-family: Inter, sans-serif;
 }
 
-
 /* Add this to your main CSS file or Hydration.css */
 
 .product-image-container {
@@ -40,20 +39,25 @@
   margin: 5px 0 10px 0;
 }
 
+/* Button-like link for product cards */
 .learn-more-btn {
   display: inline-block;
-  padding: 10px 12px;
-  border: 1px solid black;
+  padding: 8px 12px;
+  background: #ffffff;
+  color: #000000;
   text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 0.6rem;
-  transition: all 0.3s ease;
-  letter-spacing: 2px;
-  width: fit-content;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .learn-more-btn:hover {
-  background-color: black;
-  color: white;
+  opacity: 0.95;
+}
+
+/* Ensure visited/active/focus states keep the intended color */
+.learn-more-btn:visited,
+.learn-more-btn:active,
+.learn-more-btn:focus {
+  color: #000000;
 }

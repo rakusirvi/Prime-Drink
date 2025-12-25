@@ -11,19 +11,19 @@ const productList = [
     image: image1,
     title: "ICE POP",
     packSize: "12PK",
-    link: "/snowball",
+    link: "/a",
   },
   {
     image: image2,
     title: "Red Chill",
     packSize: "12PK",
-    link: "/snowball",
+    link: "/b",
   },
   {
     image: image3,
     title: "Orange",
     packSize: "12PK",
-    link: "/snowball",
+    link: "/cd",
   },
 ];
 

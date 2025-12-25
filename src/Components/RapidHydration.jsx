@@ -25,7 +25,7 @@ const productList = [
     image: image3,
     title: "OCEAN CHERRY",
     packSize: "12PK",
-    link: "./ocean-cherry",
+    link: "/ocean-cherry",
   },
 ];
 
