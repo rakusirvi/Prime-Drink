@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import Image from "../assets/navbar/1st.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 function Navbar() {
   const [showShop, setShowShop] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const toggleShop = () => {
     setShowShop((prev) => {
@@ -37,7 +41,11 @@ function Navbar() {
 
   return (
     <>
-      <div className={`nav ${isScrolled ? "scrolled" : ""}`}>
+      <div
+        className={`nav ${isScrolled ? "scrolled" : ""} ${
+          currentPath === "/Prime-Drink/login" ? "login-page-css" : ""
+        } `}
+      >
         <div className="header-1">
           <div className="flexi USUK">
             <div>

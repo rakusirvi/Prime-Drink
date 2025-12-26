@@ -61,6 +61,13 @@
   font-size: large;
   letter-spacing: 3px;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-box input[type="button"]:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .Extra_height {

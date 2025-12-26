@@ -27,10 +27,6 @@ body {
   transition: all 0.4s ease;
   border-bottom: 1px solid gray;
 }
-.nav:hover {
-  background-color: White;
-  color: black;
-}
 
 .flexic {
   display: flex;
@@ -242,4 +238,22 @@ a.nav-links,
     display: block;
     list-style: none;
   }
+}
+
+/* When on login page, force navbar text to black */
+.nav.login-page-css a {
+  color: black !important;
+}
+
+.nav.login-page-css .USUK div {
+  border: 1px solid black;
+  color: black;
+}
+
+.nav.login-page-css .icons a {
+  color: black !important;
+}
+
+.nav.login-page-css{
+  background-color: white;
 }

@@ -9,9 +9,11 @@ import RapidHydration from "./Components/RapidHydration.jsx";
 import Footer from "./Components/Footer.jsx";
 import { Navigate, BrowserRouter, Routes, Route } from "react-router-dom";
 import LogIn from "./Components/Pages/Login/Login.jsx";
+import ScrollToTop from "./ScrollToTop.jsx";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="main-wrapper">
         <Navbar />
         <Routes>
