@@ -1,3 +1,1 @@
-live 
-
-https://rakusirvi.github.io/Prime-Drink/
+https://rakeshchoudhary0.github.io/Prime-Drink/
